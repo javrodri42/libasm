@@ -6,7 +6,7 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/03 19:50:41 by javrodri          #+#    #+#             */
-/*   Updated: 2020/09/14 19:47:29 by javrodri         ###   ########.fr       */
+/*   Updated: 2020/10/01 20:04:27 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,9 @@ void    check_ft_strcmp(){
 }
 
 int main(){
+    printf("-------ft_strlen------");
     check_ft_strlen();
+    printf("-------ft_strcmp------");
     check_ft_strcmp();
     return(0);
 }
