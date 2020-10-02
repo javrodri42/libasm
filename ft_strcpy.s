@@ -10,7 +10,9 @@ _ft_strcpy:
 increment:
     inc rcx         ;increment rcx
 copy:
-    move dl, BYTE [rsi + rcx] ;dl is a low register 8bits
-    move 
+    mov dl, BYTE [rsi + rcx] ;dl is a low register 8bits
+    mov		BYTE [rdi + rcx], dl
+	cmp		dl, 0
+	jnz		increment
 return:
     ret    
