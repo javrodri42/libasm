@@ -1,18 +1,17 @@
 segment .text
     global      _ft_strcpy
+    extern      _ft_strlen
 
 _ft_strcpy:
-    mov rcx, 0      ;initialize rcx
-    mov rdx, 0      ;initialize rdx
-    cmp rsi, 0      ;string null
-    je  return      ;if string null go to return
-    jmp copy        ;if not null copy the string
-increment:
-    inc rcx         ;increment rcx
-copy:
-    mov dl, BYTE [rsi + rcx] ;dl is a low register 8bits
-    mov		BYTE [rdi + rcx], dl
-	cmp		dl, 0
-	jnz		increment
+    push    rdi
+    mov     rdi,rsi
+    call    _ft_strlen
+    mov     rcx,rax
+    pop     rdi
+    cld
+    mov     rax, rdi
+    rep     movsb
+    mov     BYTE [rdi], 0
+    jmp     return
 return:
     ret    
