@@ -10,9 +10,9 @@ _ft_strdup:
     push    rdi                ;rdi goes to LIFO    
     mov     rdi,rax            ;rax to rdi  
     call    _malloc            ;malloc of rdi in rax
-    pop     r9                 ;extract value from LIFO in R1
+    pop     r15                 ;extract value from LIFO in r15
     mov     rdi,rax            ;
-    mov     rsi, r9            ;
+    mov     rsi, r15            ;
     call    _ft_strcpy 
 return:         
     ret
