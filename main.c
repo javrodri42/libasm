@@ -6,7 +6,7 @@
 /*   By: javrodri <javrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/03 19:50:41 by javrodri          #+#    #+#             */
-/*   Updated: 2020/10/05 17:29:02 by javrodri         ###   ########.fr       */
+/*   Updated: 2020/10/07 19:41:06 by javrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,12 +113,12 @@ void	check_ft_read()
 	printf("\n");
 	printf("====Text try ====>\n");
 	printf("\n");
-	fd = open("hola", O_RDONLY);
+	fd = open("test2", O_RDONLY);
 	rlibc = read(fd, buffer, 890);
 	printf("%-20s: \"%d\"\n", "libc", rlibc);
 	close(fd);
 	
-	fd = open("hola", O_RDONLY);
+	fd = open("test2", O_RDONLY);
 	rlibasm = ft_read(fd, buffer, 890);
 	printf("%-20s: \"%d\"\n", "libasm", rlibasm);
 	close(fd);	
@@ -160,12 +160,12 @@ void	check_ft_write()
 	printf("=====================================\n\n");
 	printf("====First try ====>\n");
 	printf("\n");
-	fd = open("hola", O_WRONLY);
+	fd = open("test2", O_WRONLY);
 	rlibc = write(fd, buffer, 890);
 	printf("%-20s: \"%d\"\n", "libc", rlibc);		
 	close(fd);
 	
-	fd = open("hola", O_WRONLY);
+	fd = open("test2", O_WRONLY);
 	rlibasm = ft_write(fd, buffer, 890);
 	printf("%-20s: \"%d\"\n", "libasm", rlibasm);	
 	close(fd);
